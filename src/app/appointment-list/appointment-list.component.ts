@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Appointment } from '../models/appointment';
 
 @Component({
   selector: 'app-appointment-list',
@@ -12,6 +13,10 @@ export class AppointmentListComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  appointment:string = "Take dog for a walk";
+  appointment:Appointment = {
+    id: 1,
+    title: "Take dog for a walk",
+    date: new Date('2023-10-21'),
+  };
 
 }
